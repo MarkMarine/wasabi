@@ -22,7 +22,8 @@ LOG_DIR=${log.dir}
 MAIN=${application.main}
 DAEMON=\${WASABI_DAEMON:-${application.daemon.enable}}
 CONSOLE_LOG=\${LOG_DIR}/${application.name}-console.log
-CLASSPATH=\${HOME_DIR}/conf:\${HOME_DIR}/lib/${application.name}-all.jar
+CONF_DIR=\${WASABI_CONF_DIR:-\${HOME_DIR}/conf}
+CLASSPATH=\${CONF_DIR}:\${HOME_DIR}/lib/${application.name}-all.jar
 HEAP_SIZE=${application.heapsize}
 
 JAVA_OPTIONS="
