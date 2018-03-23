@@ -123,8 +123,8 @@ sed -i '' -e "s/chpst -u [^:]*:[^ ]* //" ${home}/${id}/bin/run 2>/dev/null
 
 if [[ "${build}" = true || "${build_js}" = true ]]; then
   if [ "${WASABI_OS}" == "${WASABI_OSX}" ]; then
-    brew list node
-    if [[ $? -eq 1 ]]; then
+    node -v
+    if [[ $? -eq 0 ]]; then
       echo "Node.js is not installed. Installing Node.js packages..."
       brew install node
       npm install -g yo grunt-cli bower grunt-contrib-compass

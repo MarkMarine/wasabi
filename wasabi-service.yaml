@@ -1,0 +1,25 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wasabi
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
+    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+spec:
+  selector:
+    app: wasabi
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+  - name: jmx
+    protocol: TCP
+    port: 8090
+    targetPort: 8090
+  - name: debug
+    protocol: TCP
+    port: 8180
+    targetPort: 8180
+  type: LoadBalancer
+

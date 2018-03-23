@@ -25,7 +25,7 @@ http://www.w3.org/2001/XMLSchema-instance">
     <version>1.0.20180226051442-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    <url>https://github.com/intuit/wasabi</url>
+    <url>https://github.com/markmarine/wasabi</url>
     <description>Opinionated micro-service kernel.</description>
 
     <properties>
@@ -61,7 +61,7 @@ http://www.w3.org/2001/XMLSchema-instance">
         <jacoco.version>0.7.9</jacoco.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
 
-        <http.proxy.host>http://insert.your.proxy.host.here</http.proxy.host>
+        <!--<http.proxy.host>http://insert.your.proxy.host.here</http.proxy.host>-->
         <http.proxy.port>80</http.proxy.port>
 
         <mysql.host>localhost</mysql.host>
@@ -77,14 +77,14 @@ http://www.w3.org/2001/XMLSchema-instance">
         <cassandra.username></cassandra.username>
         <cassandra.password></cassandra.password>
         <cassandra.experiments.keyspaceName>wasabi_experiments</cassandra.experiments.keyspaceName>
-        <cassandra.experiments.nodeHosts>localhost</cassandra.experiments.nodeHosts>
+        <cassandra.experiments.nodeHosts>cassandra</cassandra.experiments.nodeHosts>
         <cassandra.experiments.port>9042</cassandra.experiments.port>
         <cassandra.experiments.useSSL>false</cassandra.experiments.useSSL>
         <cassandra.local.dc>datacenter1</cassandra.local.dc>
         <cassandra.experiments.defaultReadConsistency>LOCAL_ONE</cassandra.experiments.defaultReadConsistency>
         <cassandra.experiments.defaultWriteConsistency>LOCAL_ONE</cassandra.experiments.defaultWriteConsistency>
         <cassandra.experiments.replicationFactor>1</cassandra.experiments.replicationFactor>
-        <cassandra.events.nodeHosts>localhost</cassandra.events.nodeHosts>
+        <cassandra.events.nodeHosts>cassandra</cassandra.events.nodeHosts>
         <cassandra.events.port>9042</cassandra.events.port>
 
         <export.rest.assignment.web.class.name>com.intuit.wasabi.assignment.impl.NoopWebAssignmentEnvelope
@@ -689,8 +689,8 @@ http://www.w3.org/2001/XMLSchema-instance">
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/intuit/wasabi</url>
-        <connection>scm:git:git://github.com/intuit/wasabi.git</connection>
-        <developerConnection>scm:git:git@github.com:intuit/wasabi.git</developerConnection>
+        <url>https://github.com/markmarine/wasabi</url>
+        <connection>scm:git:git://github.com/markmarine/wasabi.git</connection>
+        <developerConnection>scm:git:git@github.com:markmarine/wasabi.git</developerConnection>
     </scm>
 </project>
